@@ -83,7 +83,7 @@ In line with the defined temporal scope, basic statistical analyses of the error
 ![](Images/3.png)
 
 ### [2-2-3 Multicollinearity](https://github.com/yoojunT/STAT650_Final_Assignment/blob/main/Section%202-2-2%20EDA_Multicollinearity.ipynb)
-For RH3, this project intends to employ a regression-based approac following the instructions. In this regard, multicollinearity is a critical factor in selecting suitable regression models.  The figure belowrepresents  that all variables in the datasets exhibit weak multicollinearity, as indicated by Variance Inflation Factors (VIF) below 10. This information is vital for both feature selection and model determination within the context of regression analysis. The low levels of multicollinearity among the variables not only validate the appropriateness of using regression models but also ensure the reliability and interpretability of the results derived from these models.
+For RH3, this project intends to employ a regression-based approach following the instructions. In this regard, multicollinearity is a critical factor in selecting suitable regression models.  The figure below represents that all variables in the datasets exhibit weak multicollinearity, as indicated by Variance Inflation Factors (VIF) below 10. This information is vital for both feature selection and model determination within the context of regression analysis. The low levels of multicollinearity among the variables not only validate the appropriateness of using regression models but also ensure the reliability and interpretability of the results derived from these models.
 ![](Images/4.png)
 
 ## 3. Methodology
