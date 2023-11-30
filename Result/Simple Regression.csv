@@ -1,0 +1,13 @@
+State,Intercept,Coefficient,R^2,MSE,RMSE,MAE,P-values
+Texas,0.7,76.7,0.3,25548.2,159.8,85.6,"const             0.957082
+ta_error_Texas    0.000005
+dtype: float64"
+Iowa,6.9,-4.7,0.1,42619.1,206.4,115.2,"const               7.087835e-01
+cloud_error_Iowa    5.052352e-09
+dtype: float64"
+Nevada,3.3,64.8,0.2,32252.8,179.6,113.2,"const              0.886780
+ta_error_Nevada    0.000152
+dtype: float64"
+Seattle,91.7,61.5,-0.0,19791.0,140.7,78.3,"const               4.588190e-08
+ta_error_Seattle    6.547758e-07
+dtype: float64"

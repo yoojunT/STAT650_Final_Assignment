@@ -1,0 +1,18 @@
+State,R^2,MSE,RMSE,MAE,P-values
+Texas,0.3,26992.0,164.3,85.8,"const                0.416223
+ta_error_Texas       0.000014
+cloud_error_Texas    0.000508
+dtype: float64"
+Iowa,0.4,29967.2,173.1,118.7,"const               2.705978e-01
+ta_error_Iowa       1.051462e-07
+cloud_error_Iowa    8.904803e-08
+dtype: float64"
+Nevada,0.6,17212.0,131.2,97.9,"const                 0.915020
+ta_error_Nevada       0.000042
+cloud_error_Nevada    0.023742
+dtype: float64"
+Seattle,0.1,17055.4,130.6,69.9,"const                  0.000555
+ta_error_Seattle       0.001373
+rh_error_Seattle       0.850585
+cloud_error_Seattle    0.000241
+dtype: float64"

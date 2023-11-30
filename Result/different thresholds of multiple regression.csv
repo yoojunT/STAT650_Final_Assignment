@@ -1,0 +1,19 @@
+State,Threshold,R2,MSE,RMSE,MAE,Intercept,Coefficients,Selected Features
+Texas,0.0,0.3,26992.0,164.3,85.8,-10.6,"{'ta_error_Texas': 69.97261719603048, 'cloud_error_Texas': -2.788853900830441}","ta_error_Texas, cloud_error_Texas"
+Texas,0.1,0.3,26992.0,164.3,85.8,-10.6,"{'ta_error_Texas': 69.97261719603048, 'cloud_error_Texas': -2.788853900830441}","ta_error_Texas, cloud_error_Texas"
+Texas,0.2,0.3,26992.0,164.3,85.8,-10.6,"{'ta_error_Texas': 69.97261719603048, 'cloud_error_Texas': -2.788853900830441}","ta_error_Texas, cloud_error_Texas"
+Texas,0.3,0.3,26992.0,164.3,85.8,-10.6,"{'ta_error_Texas': 69.97261719603048, 'cloud_error_Texas': -2.788853900830441}","ta_error_Texas, cloud_error_Texas"
+Iowa,0.0,0.4,29967.2,173.1,118.7,-18.9,"{'ta_error_Iowa': 69.50126083380178, 'cloud_error_Iowa': -3.897024186049845}","ta_error_Iowa, cloud_error_Iowa"
+Iowa,0.1,0.4,29967.2,173.1,118.7,-18.9,"{'ta_error_Iowa': 69.50126083380178, 'cloud_error_Iowa': -3.897024186049845}","ta_error_Iowa, cloud_error_Iowa"
+Iowa,0.2,0.4,29967.2,173.1,118.7,-18.9,"{'ta_error_Iowa': 69.50126083380178, 'cloud_error_Iowa': -3.897024186049845}","ta_error_Iowa, cloud_error_Iowa"
+Iowa,0.3,0.4,29967.2,173.1,118.7,-18.9,"{'ta_error_Iowa': 69.50126083380178, 'cloud_error_Iowa': -3.897024186049845}","ta_error_Iowa, cloud_error_Iowa"
+Iowa,0.4,0.4,29967.2,173.1,118.7,-18.9,"{'ta_error_Iowa': 69.50126083380178, 'cloud_error_Iowa': -3.897024186049845}","ta_error_Iowa, cloud_error_Iowa"
+Nevada,0.0,0.6,17212.0,131.2,97.9,-2.4,"{'ta_error_Nevada': 69.95444815197565, 'cloud_error_Nevada': -4.042655105001386}","ta_error_Nevada, cloud_error_Nevada"
+Nevada,0.1,0.6,17212.0,131.2,97.9,-2.4,"{'ta_error_Nevada': 69.95444815197565, 'cloud_error_Nevada': -4.042655105001386}","ta_error_Nevada, cloud_error_Nevada"
+Nevada,0.2,0.2,32252.8,179.6,113.2,3.3,{'ta_error_Nevada': 64.79298881116667},ta_error_Nevada
+Nevada,0.3,0.2,32252.8,179.6,113.2,3.3,{'ta_error_Nevada': 64.79298881116667},ta_error_Nevada
+Seattle,0.0,0.1,17055.4,130.6,69.9,72.4,"{'ta_error_Seattle': 54.919386751118076, 'rh_error_Seattle': 0.45328860213527244, 'cloud_error_Seattle': -2.2369373491707116}","ta_error_Seattle, rh_error_Seattle, cloud_error_Seattle"
+Seattle,0.1,0.1,17055.4,130.6,69.9,72.4,"{'ta_error_Seattle': 54.919386751118076, 'rh_error_Seattle': 0.45328860213527244, 'cloud_error_Seattle': -2.2369373491707116}","ta_error_Seattle, rh_error_Seattle, cloud_error_Seattle"
+Seattle,0.2,0.1,17055.4,130.6,69.9,72.4,"{'ta_error_Seattle': 54.919386751118076, 'rh_error_Seattle': 0.45328860213527244, 'cloud_error_Seattle': -2.2369373491707116}","ta_error_Seattle, rh_error_Seattle, cloud_error_Seattle"
+Seattle,0.3,0.1,17060.0,130.6,70.0,70.0,"{'ta_error_Seattle': 52.597367604515924, 'cloud_error_Seattle': -2.256658079180667}","ta_error_Seattle, cloud_error_Seattle"
+Seattle,0.4,-0.0,19791.0,140.7,78.3,91.7,{'ta_error_Seattle': 61.50763337037259},ta_error_Seattle

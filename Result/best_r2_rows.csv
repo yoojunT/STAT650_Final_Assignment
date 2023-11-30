@@ -1,0 +1,5 @@
+State,Model,Alpha,R2,MSE,RMSE,MAE,Intercept,Coefficients,Selected Features
+Iowa,Lasso,0.0,0.4,29504.4,171.8,117.8,-8.9,[77.42642403  1.35722013 -3.90930159],"ta_error_Iowa, rh_error_Iowa, cloud_error_Iowa"
+Nevada,Lasso,10.0,0.6,18141.9,134.7,97.6,5.5,[60.99198102  0.         -3.81139908],"ta_error_Nevada, rh_error_Nevada, cloud_error_Nevada"
+Seattle,Lasso,0.0,0.1,17055.4,130.6,69.9,72.4,[54.91736323  0.45305465 -2.23695346],"ta_error_Seattle, rh_error_Seattle, cloud_error_Seattle"
+Texas,Lasso,0.0,0.3,26663.3,163.3,85.4,-2.4,[79.57147763  1.7130329  -2.87260188],"ta_error_Texas, rh_error_Texas, cloud_error_Texas"
