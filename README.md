@@ -36,7 +36,7 @@ To fill this knowledge gap, this research leverages the hourly forecast data upd
 - **Temporal Scope**: This project focuses on analyzing summer weather data from the NWS for the period of June 1 to August 30, 2023, specifically between the hours of 9:00 AM and 6:00 PM. The selection of this timeframe aligns with standard working hours, which is critical for the research's primary objective of forecasting occupational heat risks while minimizing the diurnal effects of nighttime. The decision to target 3-hour-ahead forecasts at 12:00 PM and 3:00 PM stems from the NWS's capability to provide hourly forecasts up to 18 hours in advance, with each forecast hour having its unique uncertainty levels. This choice was reinforced by an Exploratory Data Analysis (EDA) indicating minimal variance in accuracy across different forecast times. Additionally, the specific focus on 12:00 PM and 3:00 PM aligns with observed variances in GHI and WBGT, thereby optimizing the research's scope to concentrate on comparing different regression models under the project's guidelines.
 - **Spatial Scope**: This project concentrates on four distinct geolocations within the United States, each representing a different climate type. This strategic selection is primarily driven by the objectives of RH2 and RH3, which investigate the variability of GHI forecast errors in various climatic regions. These locations have been carefully chosen to provide a comprehensive understanding of how climate diversity influences forecasting accuracy. The specifics of these geolocations are detailed in the figure provided below.
 
-![image.png](attachment:1abcb3c1-4f55-462d-a220-090ebcc04f04.png)
+![](Images/1.png)
 
 ## 2. Data Description
 > **[Guideline]** </br>
@@ -74,17 +74,17 @@ This study systematically collects historical weather observation and forecast d
 
 In this study, forecast errors for each variable are first calculated by comparing them with observed data, and these errors are then quantified using Mean Absolute Error (MAE) and Root Mean Square Error (RMSE). The analysis reveals two significant findings. Firstly, although longer-range forecasts, like those made 18 hours ahead, generally tend to be less accurate than nearer-term forecasts (e.g., 1-hour ahead), we observed no notable difference in accuracy between 3-hour-ahead and 6-hour-ahead forecasts in the context of heat risk. Secondly, the forecasts for 12:00 PM and 3:00 PM consistently showed higher errors compared to those for 9:00 AM and 6:00 PM, coinciding with periods of lower heat radiation. Notably, GHI exhibited the greatest level of uncertainty among the variables, significantly impacting the WBGT trends. This aspect will receive further examination in RH1. Based on these insights, the study's temporal focus is refined to 3-hour-ahead forecasts at 12:00 PM and 3:00 PM, as detailed in Section 1-3.
 
-![image.png](attachment:76059950-ed56-4027-b835-b1f8f862a38a.png)
+![](Images/2.png)
 
 ### [2-2-2 Desciptive analysis](https://github.com/yoojunT/STAT650_Final_Assignment/blob/main/Section%202-2-2%20EDA_Multicollinearity.ipynb)
   
 In line with the defined temporal scope, basic statistical analyses of the errors are illustrated in the figure below, which shows no missing values in the dataset. For this project, additional pre-processing steps, such as data cleaning and normalization, were not undertaken. This decision stems from the intent to utilize the ultimate regression model, as discussed in RH3, in real-world scenarios where such processing may not be feasible due to time constraints and practical application considerations. Moreover, to maintain consistency across different climate regions, the project has deliberately minimized further pre-processing, taking into account these practical aspects and the need for uniformity in variable treatment.
 
-![image.png](attachment:6a9a4492-9012-4b50-9f80-73f8eda405b4.png)
+![](Images/3.png)
 
 ### [2-2-3 Multicollinearity](https://github.com/yoojunT/STAT650_Final_Assignment/blob/main/Section%202-2-2%20EDA_Multicollinearity.ipynb)
 For RH3, this project intends to employ a regression-based approac following the instructions. In this regard, multicollinearity is a critical factor in selecting suitable regression models.  The figure belowrepresents  that all variables in the datasets exhibit weak multicollinearity, as indicated by Variance Inflation Factors (VIF) below 10. This information is vital for both feature selection and model determination within the context of regression analysis. The low levels of multicollinearity among the variables not only validate the appropriateness of using regression models but also ensure the reliability and interpretability of the results derived from these models.
-![image.png](attachment:6c320205-0be8-464c-a54d-d477fe2ea450.png)
+![](Images/4.png)
 
 ## 3. Methodology
 > **[Guideline]** </br>
@@ -127,31 +127,32 @@ This study conducts a comprehensive analysis of three pivotal research hypothese
 
 The figure presented below is a series of scatter plots illustrating the relationship between the dependent variable (GHI_error) and other variables across four distinct climate regions, which includes the WBGT_error variable. Notably, the P-values in all instances are below 0.05, indicative of a relatively strong linear relationship. In terms of correlation, va_error exhibits a weaker correlation in all regions except Texas, where the correlation values are nearly zero. In contrast, ta_error demonstrates the strongest correlation with GHI_error in each climate region. Most notably, the correlation coefficients between GHI_error and WBGT_error are 0.77, 0.77, 0.81, and 0.73 for Texas, Iowa, Nevada, and Seattle repectively with below 0.05. These correlations underscore a strong linear relationship between these two variables. This finding lends substantial support to RH1, emphasizing the significance of minimizing GHI forecast errors to ensure accurate heat risk forecasts.
 
-![image.png](attachment:559906b5-7c6c-4dee-a045-3c27150a8aaf.png)
+![](Images/5.png)
 
 ### [4-2 RH 2 - One-way ANOVA test](https://github.com/yoojunT/STAT650_Final_Assignment/blob/main/Section%204-2%20Research%20Hypothesis%202.ipynb)
 The tables presented below display the results of a one-way ANOVA test conducted to examine the variations in GHI_error and ta_error across four distinct climate regions. Analyzing the outcomes of GHI_error comparisons reveals that although the P-values fall within a relatively narrow range, spanning from 0.09 to 0.4, none of them dip below the conventional significance threshold of 0.05. This suggests that, based on the available data, it is challenging to assert that there exist statistically significant differences in GHI errors among the various climate regions. In contrast, an examination of the ta_error results reveals that 4 out of 6 comparisons yield P-values below 0.05, accompanied by higher F-values. Considering the observed linear correlation between ta_error and GHI_error, ranging from 0.38 to 0.51, it becomes apparent that exploring a more diverse set of scenarios could potentially alter this conclusion. To sum up, within the sample population of this study, encompassing the summer months and four defined locations during specific hours, it remains challenging to establish statistically significant distinctions in GHI errors among the different climate regions.
 
-![image.png](attachment:25d85e8c-7ac8-42b6-9d02-0f7912e00ab1.png)
+![](Images/6.png)
 
 ### [4-3 RH 3 - Regression models](https://github.com/yoojunT/STAT650_Final_Assignment/blob/main/Section%204-3%20Research%20Hypothesis%203.ipynb)
 This section introduces a comparison between two regression models: a simple regression model that utilizes the independent variable exhibiting the highest correlation with the dependent variable, and a multiple regression model that includes variables surpassing a 0.1 correlation threshold. The effect of modifying these correlation thresholds on model performance is also examined. Additionally, to further improve the model, the results of Lasso and Ridge regression methods, applied with different alpha values, are analyzed and compared. The train and test datasets are randomlay split with 0.7 and 0.3 ratios, respectively. The findings are presented in the tables below.
 In the simple regression model analysis, 'ta_error' emerges as the independent variable with the highest correlation across three locations: 0.39 in Texas, 0.33 in Nevada, and 0.42 in Seattle. Conversely, for Iowa, 'cloud_error' shows the highest correlation among independent variables, at 0.49. Based on these findings, distinct simple regression models were developed and assessed. However, all models demonstrated limited performance, with their explainability particularly low, as indicated by R-squared values falling below 0.3. This suggests a potential need to incorporate additional independent variables to enhance the models' explanatory power through the use of multiple regression approaches.
 
-![image.png](attachment:3e19bd7b-ee1e-4969-9a88-7485317200f4.png)
+![](Images/7.png)
+
 The table presented illustrates the outcomes of various multiple regression models. Notably, while Seattle's model incorporates three independent variables—ta_error, cloude_error, and rh_error—the models for the other three locations rely solely on ta_error and cloude_error. A comparison with simple regression results reveals an enhancement in performance metrics such as R squared, RMSE, and MAE for Iowa, Nevada, and Seattle, although Texas shows a marginal decline. These findings underscore the necessity of developing climate-specific regression models, highlighting that a universal model is not feasible for different climatic conditions. Overall, it is evident that the multiple regression models surpass the simple regression models in terms of performance.
 
-![image.png](attachment:2edbdfb4-4b53-45a7-85fc-c021360e0765.png)
+![](Images/8.png)
 
 **[Model Improvement Plan 1]** - Different correlation thresholds on multiple regression model </br>
 The below table details the impact of varying correlation thresholds on a multiple regression model. These thresholds, set between 0 and 1 at intervals of 0.1, continue until no independent variables remain. Despite altering the threshold from the initial 0.1, there is no observed improvement in model performance across all cases. However, it is important to note that these results could differ with alternative datasets. While the current dataset shows no enhancement, this approach may prove effective in other scenarios, particularly where more influential variables are present and issues of multicollinearity are mitigated. This suggests potential applicability in diverse data environments where similar trends are observed.
 
-![image.png](attachment:68775451-3c22-4bcc-b043-eae80f441307.png)
+![](Images/9.png)
 
 **[Model Improvement Plan 2]** - Different regularizations </br>
 This improvement plan involves utilizing different regularizations, specifically Lasso and Ridge regression models. Note that for the purpose of seeking potential improvement plan which is data-dependent, the underlying assumptions of Lasso and Ridge regression models are not addressed in this project. To assess the efficacy of this method, the alpha parameter is varied across a range of values: 0.001, 0.01, 0.1, 1, 10, 100, and 1000. Subsequent tables present the optimal results for each location, evaluated based on MAE, RMSE, and R squared metrics. When compared with the outcomes of the multiple regression analysis, there is a general improvement in R squared, MAE, and RMSE for most locations, except Texas where MAE and RMSE do not show enhancement. This underscores the importance of carefully analyzing the specific characteristics of each dataset before implementing such model improvement strategies, ensuring that the approach is tailored to the unique needs of the data.
 
-![image.png](attachment:417d2618-b4be-4cc1-9fff-fa0702ce3824.png)
+![](Images/10.png)
 
 ## 5. Conclusion 
 > **[Guideline]**</br>
